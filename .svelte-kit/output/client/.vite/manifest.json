@@ -1,0 +1,156 @@
+{
+  ".svelte-kit/generated/client-optimized/app.js": {
+    "file": "_app/immutable/entry/app.DIiXs65u.js",
+    "name": "entry/app",
+    "src": ".svelte-kit/generated/client-optimized/app.js",
+    "isEntry": true,
+    "imports": [
+      "_CKfYcjDY.js",
+      "_fgVXtmWi.js",
+      "_RlmJM96O.js",
+      "_Cn_HKAD8.js",
+      "_VPmbUtWU.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/client-optimized/nodes/0.js",
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js",
+      ".svelte-kit/generated/client-optimized/nodes/3.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.js": {
+    "file": "_app/immutable/nodes/0.BtvZW7Eh.js",
+    "name": "nodes/0",
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_RlmJM96O.js",
+      "_MzKkzMKI.js",
+      "_CKfYcjDY.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/1.js": {
+    "file": "_app/immutable/nodes/1._Vofsqu0.js",
+    "name": "nodes/1",
+    "src": ".svelte-kit/generated/client-optimized/nodes/1.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_RlmJM96O.js",
+      "_MzKkzMKI.js",
+      "_CKfYcjDY.js",
+      "_fgVXtmWi.js",
+      "_BX38NmTz.js",
+      "_CgKTHtHe.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "file": "_app/immutable/nodes/2.yeF0VFNm.js",
+    "name": "nodes/2",
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_RlmJM96O.js",
+      "_MzKkzMKI.js",
+      "_CKfYcjDY.js",
+      "_fgVXtmWi.js",
+      "_VPmbUtWU.js",
+      "_B6w811fr.js",
+      "_BX38NmTz.js"
+    ],
+    "css": [
+      "_app/immutable/assets/2.CGs9T--u.css"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/3.js": {
+    "file": "_app/immutable/nodes/3.CS3YIKnO.js",
+    "name": "nodes/3",
+    "src": ".svelte-kit/generated/client-optimized/nodes/3.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_RlmJM96O.js",
+      "_MzKkzMKI.js",
+      "_CKfYcjDY.js",
+      "_fgVXtmWi.js",
+      "_VPmbUtWU.js",
+      "_B6w811fr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/3.Dae6jyOt.css"
+    ]
+  },
+  "_B6w811fr.js": {
+    "file": "_app/immutable/chunks/B6w811fr.js",
+    "name": "attributes",
+    "imports": [
+      "_CKfYcjDY.js"
+    ]
+  },
+  "_BX38NmTz.js": {
+    "file": "_app/immutable/chunks/BX38NmTz.js",
+    "name": "lifecycle",
+    "imports": [
+      "_CKfYcjDY.js"
+    ]
+  },
+  "_CKfYcjDY.js": {
+    "file": "_app/immutable/chunks/CKfYcjDY.js",
+    "name": "runtime"
+  },
+  "_CgKTHtHe.js": {
+    "file": "_app/immutable/chunks/CgKTHtHe.js",
+    "name": "entry",
+    "imports": [
+      "_CKfYcjDY.js",
+      "_Cn_HKAD8.js"
+    ]
+  },
+  "_Cn_HKAD8.js": {
+    "file": "_app/immutable/chunks/Cn_HKAD8.js",
+    "name": "index-client",
+    "imports": [
+      "_CKfYcjDY.js"
+    ]
+  },
+  "_MzKkzMKI.js": {
+    "file": "_app/immutable/chunks/MzKkzMKI.js",
+    "name": "legacy",
+    "imports": [
+      "_CKfYcjDY.js"
+    ]
+  },
+  "_RlmJM96O.js": {
+    "file": "_app/immutable/chunks/RlmJM96O.js",
+    "name": "disclose-version",
+    "imports": [
+      "_CKfYcjDY.js"
+    ]
+  },
+  "_VPmbUtWU.js": {
+    "file": "_app/immutable/chunks/VPmbUtWU.js",
+    "name": "props",
+    "imports": [
+      "_CKfYcjDY.js"
+    ]
+  },
+  "_fgVXtmWi.js": {
+    "file": "_app/immutable/chunks/fgVXtmWi.js",
+    "name": "render",
+    "imports": [
+      "_CKfYcjDY.js",
+      "_RlmJM96O.js"
+    ]
+  },
+  "node_modules/.pnpm/@sveltejs+kit@2.53.4_@sveltejs+vite-plugin-svelte@6.2.4_svelte@5.53.7_vite@7.3.1_@types_3fe99442b2523d0091a7094677c3bef2/node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
+    "file": "_app/immutable/entry/start.BlbEJZm-.js",
+    "name": "entry/start",
+    "src": "node_modules/.pnpm/@sveltejs+kit@2.53.4_@sveltejs+vite-plugin-svelte@6.2.4_svelte@5.53.7_vite@7.3.1_@types_3fe99442b2523d0091a7094677c3bef2/node_modules/@sveltejs/kit/src/runtime/client/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_CgKTHtHe.js"
+    ]
+  }
+}
