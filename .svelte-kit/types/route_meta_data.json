@@ -1,9 +1,0 @@
-{
-	"/": [],
-	"/pieces": [
-		"src/routes/pieces/+page.server.ts"
-	],
-	"/pieces/[slug]": [
-		"src/routes/pieces/[slug]/+page.server.ts"
-	]
-}
