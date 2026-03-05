@@ -3,4 +3,6 @@ import { type Handle } from '@sveltejs/kit'
 import { handleKeystatic } from 'keystatic-sveltekit'
 import config from '../keystatic.config.ts'
 
-export const handle: Handle = await handleKeystatic({ config })
+const keystaticHandle = await handleKeystatic({ config })
+
+export const handle: Handle = keystaticHandle

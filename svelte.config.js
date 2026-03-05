@@ -1,5 +1,9 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapterNode from '@sveltejs/adapter-node';
+import adapterVercel from '@sveltejs/adapter-vercel'; // or netlify/cloudflare/static, etc.
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+
+const target = process.env.DEPLOY_TARGET; // 'vercel' | undefined
+const adapter = target === 'vercel' ? adapterVercel : adapterNode;
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

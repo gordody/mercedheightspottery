@@ -5,11 +5,14 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"clean": "rm -rf .svelte-kit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"dependencies": {
 		"@keystatic/core": "^0.5.48",
+		"@sveltejs/adapter-node": "^5.5.4",
+		"@sveltejs/adapter-vercel": "^6.3.3",
 		"keystatic-sveltekit": "^1.2.0",
 		"react": "^19.2.4",
 		"react-dom": "^19.2.4"
