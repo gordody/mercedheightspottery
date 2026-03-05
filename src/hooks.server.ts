@@ -1,7 +1,7 @@
 // src/hooks.server.ts
 import { type Handle } from '@sveltejs/kit'
 import { handleKeystatic } from 'keystatic-sveltekit'
-import config from '../keystatic.config.ts'
+import config from '../keystatic.config'
 
 const keystaticHandle = await handleKeystatic({ config })
 
