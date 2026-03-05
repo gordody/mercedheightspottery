@@ -9,7 +9,11 @@
   <section class="hero">
     <h1>Merced Heights Pottery</h1>
     <p>Handcrafted ceramic pieces</p>
-    <a href="/pieces" class="cta-button">View Pieces</a>
+    <br>
+    <p>Under development</p>
+    <!--
+      <a href="/pieces" class="cta-button">View Pieces</a>
+    -->
   </section>
 </main>
 
