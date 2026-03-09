@@ -1,7 +1,8 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "*": {
-      "includeFiles": ["content/**", "static/**"]
+      "includeFiles": "content/**"
     }
   }
 }
