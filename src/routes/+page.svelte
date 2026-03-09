@@ -1,5 +1,5 @@
 <script lang="ts">
-console.log(import.meta.env.VITE_DEPLOY_TARGET);
+console.log(import.meta.env.VITE_DEPLOY_TARGET, import.meta.env.VITE_DEPLOY_ENVIRONMENT);
 const target = import.meta.env.VITE_DEPLOY_TARGET; // 'vercel' | undefined
 const deploy_environment = import.meta.env.VITE_DEPLOY_ENVIRONMENT; // 'production' | 'preview' | 'development'
 </script>
