@@ -98,6 +98,8 @@ yarn-error.log*
 # ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 # SvelteKit-specific build artifacts and development files
 
+.svelte-kit/
+
 *.cjs.map
 *.d.ts
 *.js
