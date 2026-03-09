@@ -189,3 +189,4 @@ test-results/
 
 # EXAMPLE USAGE FOR SVELTEKIT PROJECT:
 # cp frameworks/svelte_kit.gitignore .gitignore
+.vercel

@@ -1,6 +1,7 @@
 <script lang="ts">
 console.log(import.meta.env.VITE_DEPLOY_TARGET);
 const target = import.meta.env.VITE_DEPLOY_TARGET; // 'vercel' | undefined
+const deploy_environment = import.meta.env.VITE_DEPLOY_ENVIRONMENT; // 'production' | 'preview' | 'development'
 </script>
 
 <svelte:head>
@@ -12,7 +13,7 @@ const target = import.meta.env.VITE_DEPLOY_TARGET; // 'vercel' | undefined
     <h1>Merced Heights Pottery</h1>
     <p>Handcrafted ceramic pieces</p>
     <br>
-    {#if target === "vercel"}
+    {#if target === "vercel" && deploy_environment === "production"}
       <p>Under development</p>
     {:else}
       <a href="/pieces" class="cta-button">View Pieces</a>
