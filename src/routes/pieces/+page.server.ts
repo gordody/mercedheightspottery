@@ -8,6 +8,6 @@ export async function load() {
   const firstEntry = firstPiece ? firstPiece.entry : null;
   const firstImages = firstEntry ? firstEntry.images : [];
 
-  console.log("Loaded pieces:", process.cwd(), firstImages.join(", "));
+  console.log("Loaded pieces:", process.cwd(), pieces, firstPiece, firstEntry, firstImages.join(", "));
   return { pieces };
 }
