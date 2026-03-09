@@ -15,11 +15,13 @@
 </script>
 
 <svelte:head>
-  <title>Pieces</title>
+  <title>Merced Heights Pottery</title>
 </svelte:head>
 
 <main>
-  <h1>Pieces</h1>
+  <a href="/" class="back">← Main</a>
+
+  <h1>Merced Heights Pottery Ceramics</h1>
 
   <div class="filters">
     <div class="categories">

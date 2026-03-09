@@ -7,7 +7,7 @@ export default config({
     pieces: collection({
       label: 'Pieces',
       slugField: 'title',
-      path: 'content/pieces/*',
+      path: 'content/pieces/*/',
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
         description: fields.text({ label: 'Description', multiline: true }),
@@ -30,8 +30,13 @@ export default config({
         available: fields.checkbox({ label: 'Available for purchase', defaultValue: true }),
         featured: fields.checkbox({ label: 'Feature on homepage', defaultValue: false }),
         images: fields.array(
-          fields.image({ label: 'Image', directory: 'public/images/pieces' }),
-          { label: 'Images', itemLabel: (props) => props.fields.value ?? 'Image' }
+          fields.image({ label: 'Image', directory: 'static/images', publicPath: '/images/' }),
+          { label: 'Images', 
+            itemLabel: (props) => {
+              console.log("images=", props);
+              return 'Image';
+          }
+         }
         ),
       },
     }),

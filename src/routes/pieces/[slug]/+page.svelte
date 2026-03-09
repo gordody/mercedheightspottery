@@ -15,9 +15,9 @@
   <div class="layout">
     <!-- Image gallery -->
     <div class="images">
-      {#if piece.images.length > 0}
+      {#if piece.images && piece.images.length > 0}
         <div class="main-image">
-          <enhanced:img src={piece.images[activeImage]} alt={piece.title} />
+          <img src={piece.images[activeImage]} alt={piece.title} />
         </div>
         {#if piece.images.length > 1}
           <div class="thumbnails">
@@ -27,11 +27,15 @@
                 on:click={() => (activeImage = i)}
                 aria-label="View image {i + 1}"
               >
-                <enhanced:img src={img} alt="{piece.title} photo {i + 1}" />
+                <img src={img} alt="{piece.title} photo {i + 1}" />
               </button>
             {/each}
           </div>
         {/if}
+      {:else}
+        <div class="no-images">
+          <p>No images available</p>
+        </div>
       {/if}
     </div>
 
@@ -147,6 +151,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .no-images {
+    aspect-ratio: 1;
+    background: #f5f5f5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
   }
 
   h1 {
