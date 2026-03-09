@@ -13,6 +13,9 @@ console.log("Env: ", "target=", target, "environment=", deploy_environment);
   <section class="hero">
     <h1>Merced Heights Pottery</h1>
     <p>Handcrafted ceramic pieces</p>
+
+    <img src="images/hero.jpg" alt="Merced Heights Pottery" height="400" />
+    
     <br>
     {#if target === "vercel" && deploy_environment === "production"}
       <p>Under development</p>
