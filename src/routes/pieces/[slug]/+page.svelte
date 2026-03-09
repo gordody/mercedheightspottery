@@ -25,6 +25,7 @@
               <button
                 class:active={activeImage === i}
                 on:click={() => (activeImage = i)}
+                aria-label="View image {i + 1}"
               >
                 <enhanced:img src={img} alt="{piece.title} photo {i + 1}" />
               </button>

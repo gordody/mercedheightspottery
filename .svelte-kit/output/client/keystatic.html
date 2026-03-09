@@ -14,6 +14,15 @@
         }
       }
     </style>
+    <script id="cms-dev" type="module">
+      import { createHotContext } from '/@vite/client'
+
+      import.meta.hot = createHotContext('/keystatic')
+
+      import.meta.hot.on('keystatic:reload', () => {
+        window.location.reload()
+      })
+    </script>
   </head>
   <body>
     <div id="app"></div>

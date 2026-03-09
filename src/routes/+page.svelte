@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+console.log(import.meta.env.VITE_DEPLOY_TARGET);
+const target = import.meta.env.VITE_DEPLOY_TARGET; // 'vercel' | undefined
 </script>
 
 <svelte:head>
@@ -10,10 +12,11 @@
     <h1>Merced Heights Pottery</h1>
     <p>Handcrafted ceramic pieces</p>
     <br>
-    <p>Under development</p>
-    <!--
+    {#if target === "vercel"}
+      <p>Under development</p>
+    {:else}
       <a href="/pieces" class="cta-button">View Pieces</a>
-    -->
+    {/if}
   </section>
 </main>
 
