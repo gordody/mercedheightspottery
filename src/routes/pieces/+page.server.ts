@@ -4,6 +4,10 @@ import keystaticConfig from '../../../keystatic.config';
 export async function load() {
   const reader = createReader(process.cwd(), keystaticConfig);
   const pieces = await reader.collections.pieces.all();
-  console.log("Loaded pieces:", process.cwd(), pieces[0].entry.images.join(", "));
+  const firstPiece = (pieces && pieces.length && pieces.length > 0) ? pieces[0] : null;
+  const firstEntry = firstPiece ? firstPiece.entry : null;
+  const firstImages = firstEntry ? firstEntry.images : [];
+
+  console.log("Loaded pieces:", process.cwd(), firstImages.join(", "));
   return { pieces };
 }
