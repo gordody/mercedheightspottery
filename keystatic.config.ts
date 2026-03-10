@@ -7,7 +7,7 @@ export default config({
     pieces: collection({
       label: 'Pieces',
       slugField: 'title',
-      path: 'content/pieces/*/',
+      path: 'static/content/pieces/*/',
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
         description: fields.text({ label: 'Description', multiline: true }),
