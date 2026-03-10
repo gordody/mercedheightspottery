@@ -8,7 +8,7 @@ export async function load() {
   console.log("Created reader=", reader, "for config=", keystaticConfig);
 
   // list the files of process.cwd()/content/pieces recursively
-  const piecesFolder = `${process.cwd()}/content/pieces`;
+  const piecesFolder = `${process.cwd()}`;
   const fnListDir = (dir: string) => {
     console.log("Reading directory=", dir);
     fs.readdir(dir, { withFileTypes: true }, (err, entries) => {
@@ -18,7 +18,7 @@ export async function load() {
       }
       entries.forEach(entry => {
         const fullPath = `${dir}/${entry.name}`;
-        if (entry.isDirectory()) {
+        if (entry.isDirectory() && entry.name !== "node_modules") {
           fnListDir(fullPath); // Recurse into subdirectory
         } else {
           console.log("Found file=", fullPath);
@@ -33,11 +33,11 @@ export async function load() {
   const firstEntry = firstPiece ? firstPiece.entry : null;
   const firstImages = firstEntry ? firstEntry.images : [];
 
-  console.log("Loaded pieces from=", process.cwd(), 
-    "pieces=", pieces, 
-    "firstPiece=", firstPiece, 
-    "firstEntry=", firstEntry, 
-    "images=", firstImages.join(", "));
+  // console.log("Loaded pieces from=", process.cwd(), 
+  //   "pieces=", pieces, 
+  //   "firstPiece=", firstPiece, 
+  //   "firstEntry=", firstEntry, 
+  //   "images=", firstImages.join(", "));
 
   return { pieces };
 }
