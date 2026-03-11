@@ -15,7 +15,8 @@
 		"@sveltejs/adapter-vercel": "^6.3.3",
 		"keystatic-sveltekit": "^1.2.0",
 		"react": "^19.2.4",
-		"react-dom": "^19.2.4"
+		"react-dom": "^19.2.4",
+		"yaml": "^2.8.2"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
