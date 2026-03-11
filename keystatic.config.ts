@@ -1,6 +1,9 @@
 import { config, collection, fields } from '@keystatic/core';
 
 export default config({
+  ui: {
+    brand: { name: 'Merced Heights Pottery' },
+  },
   storage: { kind: 'local' },
 
   collections: {
