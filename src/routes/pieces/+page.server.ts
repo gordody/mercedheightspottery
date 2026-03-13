@@ -1,8 +1,12 @@
-import { createReader } from '@keystatic/core/reader';
+import { createGitHubReader } from '@keystatic/core/reader/github';
 import keystaticConfig from '../../../keystatic.config';
 
 export async function load() {
-  const reader = createReader(process.cwd(), keystaticConfig);
+  const reader = createGitHubReader(keystaticConfig, {
+    repo: 'gordody/mercedheightspottery',
+    ref: process.env.VERCEL_GIT_COMMIT_REF ?? process.env.KEYSTATIC_CONTENT_REF,
+    token: process.env.GITHUB_TOKEN ?? process.env.KEYSTATIC_GITHUB_READER_TOKEN
+  });
   const pieces = await reader.collections.pieces.all();
   return { pieces };
 }
