@@ -7,7 +7,7 @@ export default config({
   storage: {
     kind: 'github',
     repo: 'gordody/mercedheightspottery',
-    branchPrefix: 'new-pieces/
+    branchPrefix: 'new-pieces/'
   },
 
   collections: {
