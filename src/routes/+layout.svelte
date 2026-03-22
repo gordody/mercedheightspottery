@@ -5,24 +5,23 @@
 
 	const SNIPCART_VERSION = '3.3.3';
 	const SNIPCART_CDN_BASE = `https://cdn.snipcart.com/themes/v${SNIPCART_VERSION}/default`;
-	const SNIPCART_PUBLIC_KEY =
-		'ZjQxMmNkMDktYmJmYy00YmUzLWIyZjMtOTdjNzgxZGNiNjczNjM5MDgxNjk2MzAxMDczMjE4';
 
 	export let data: {
 		enableSnipcart: boolean;
+		snipcartPublicKey: string;
 	};
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 	onMount(() => {
-		if (data.enableSnipcart) {
-			initializeSnipcart();
+		if (data.enableSnipcart && data.snipcartPublicKey) {
+			initializeSnipcart(data.snipcartPublicKey);
 		}
 	});
 
-	function initializeSnipcart() {
+	function initializeSnipcart(publicKey: string) {
 		(window as any).SnipcartSettings = {
-			publicApiKey: SNIPCART_PUBLIC_KEY
+			publicApiKey: publicKey
 		};
 
 		let snipcart = document.querySelector('#snipcart') as HTMLElement | null;
@@ -32,7 +31,7 @@
 			snipcart.hidden = true;
 			document.body.appendChild(snipcart);
 		}
-		snipcart.dataset.apiKey = SNIPCART_PUBLIC_KEY;
+		snipcart.dataset.apiKey = publicKey;
 
 		const existingScript = document.querySelector('script[src*="cdn.snipcart.com"][src*="snipcart.js"]');
 		if (!existingScript) {
