@@ -13,6 +13,7 @@
 		"@keystatic/core": "^0.5.48",
 		"@sveltejs/adapter-node": "^5.5.4",
 		"@sveltejs/adapter-vercel": "^6.3.3",
+		"@vercel/analytics": "^2.0.1",
 		"keystatic-sveltekit": "^1.2.0",
 		"react": "^19.2.4",
 		"react-dom": "^19.2.4",
