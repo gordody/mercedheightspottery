@@ -1,4 +1,5 @@
 import YAML from 'yaml';
+import { isSnipcartEnabled } from '../../lib/server/feature-flags';
 
 type PieceEntry = {
   title: string;
@@ -49,7 +50,7 @@ function loadAllPiecesFromBundledContent(): PieceRecord[] {
         }
       };
     })
-    .filter((piece): piece is PieceRecord => piece !== null);
+    .filter((piece) => piece !== null) as PieceRecord[];
 
   if (pieces.length === 0) {
     console.error('[pieces loader] No bundled content found at /static/content/pieces/*/index.yaml');
@@ -60,6 +61,7 @@ function loadAllPiecesFromBundledContent(): PieceRecord[] {
 
 export async function load() {
   const pieces = loadAllPiecesFromBundledContent();
+  const enableSnipcart = isSnipcartEnabled();
 
-  return { pieces };
+  return { pieces, enableSnipcart };
 }

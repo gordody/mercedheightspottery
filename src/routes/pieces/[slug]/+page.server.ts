@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import YAML from 'yaml';
+import { isSnipcartEnabled } from '../../../lib/server/feature-flags';
 
 type PieceEntry = {
   title: string;
@@ -51,10 +52,11 @@ function loadPieceBySlugFromBundledContent(slug: string): PieceEntry | null {
 
 export async function load({ params }: { params: { slug: string } }) {
   const piece = loadPieceBySlugFromBundledContent(params.slug);
+  const enableSnipcart = isSnipcartEnabled();
   
   if (!piece) {
     throw error(404, 'Piece not found');
   }
 
-  return { piece, slug: params.slug };
+  return { piece, slug: params.slug, enableSnipcart };
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PieceCard from "$lib/components/PieceCard.svelte";
+  import PieceCard from "../../lib/components/PieceCard.svelte";
 
   export let data;
 
@@ -55,6 +55,7 @@
             images: piece.entry.images,
             category: piece.entry.category,
           }}
+          enableSnipcart={data.enableSnipcart}
         />
       {/each}
     </div>
