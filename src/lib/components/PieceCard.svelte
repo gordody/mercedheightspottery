@@ -7,6 +7,7 @@
     images: string[];
     category: string;
   };
+  export let enableSnipcart = false;
 </script>
 
 <a href="/pieces/{piece.slug}" class="card">
@@ -22,7 +23,7 @@
   <div class="info">
     <h3>{piece.title}</h3>
     <div class="meta">
-      {#if piece.price}
+      {#if enableSnipcart && piece.price}
         <span class="price">${piece.price}</span>
       {/if}
       {#if !piece.available}

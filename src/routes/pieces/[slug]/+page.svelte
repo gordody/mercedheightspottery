@@ -43,7 +43,7 @@
     <div class="details">
       <h1>{piece.title}</h1>
 
-      {#if piece.price}
+      {#if data.enableSnipcart && piece.price}
         <p class="price">${piece.price}</p>
       {/if}
 
@@ -74,7 +74,7 @@
         {/if}
       </dl>
 
-      {#if piece.available && piece.price}
+      {#if data.enableSnipcart && piece.available && piece.price}
         <!-- Snipcart buy button — add your item details here -->
         <button
           class="buy-button snipcart-add-item"

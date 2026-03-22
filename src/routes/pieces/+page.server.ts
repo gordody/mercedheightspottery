@@ -1,5 +1,6 @@
 import { createGitHubReader } from '@keystatic/core/reader/github';
 import keystaticConfig from '../../../keystatic.config';
+import { isSnipcartEnabled } from '../../lib/server/feature-flags';
 
 export async function load() {
   const reader = createGitHubReader(keystaticConfig, {
@@ -8,5 +9,6 @@ export async function load() {
     token: process.env.GITHUB_TOKEN ?? process.env.KEYSTATIC_GITHUB_READER_TOKEN
   });
   const pieces = await reader.collections.pieces.all();
-  return { pieces };
+  const enableSnipcart = isSnipcartEnabled();
+  return { pieces, enableSnipcart };
 }

@@ -1,6 +1,7 @@
 import { createGitHubReader } from '@keystatic/core/reader/github';
 import keystaticConfig from '../../../../keystatic.config';
 import { error } from '@sveltejs/kit';
+import { isSnipcartEnabled } from '../../../lib/server/feature-flags';
 
 export async function load({ params }: { params: { slug: string } }) {
   const reader = createGitHubReader(keystaticConfig, {
@@ -9,10 +10,11 @@ export async function load({ params }: { params: { slug: string } }) {
     token: process.env.GITHUB_TOKEN ?? process.env.KEYSTATIC_GITHUB_READER_TOKEN
   });
   const piece = await reader.collections.pieces.read(params.slug);
+  const enableSnipcart = isSnipcartEnabled();
 
   if (!piece) {
     throw error(404, 'Piece not found');
   }
 
-  return { piece, slug: params.slug };
+  return { piece, slug: params.slug, enableSnipcart };
 }

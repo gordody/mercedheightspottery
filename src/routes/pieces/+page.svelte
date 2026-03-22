@@ -55,6 +55,7 @@
             images: piece.entry.images,
             category: piece.entry.category,
           }}
+          enableSnipcart={data.enableSnipcart}
         />
       {/each}
     </div>
