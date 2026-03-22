@@ -17,11 +17,7 @@ console.log("Env: ", "target=", target, "environment=", deploy_environment);
     <img src="images/hero.jpg" alt="Merced Heights Pottery" height="400" />
     
     <br>
-    {#if target === "vercel" && deploy_environment === "production"}
-      <p>Under development</p>
-    {:else}
       <a href="/pieces" class="cta-button">View Pieces</a>
-    {/if}
   </section>
 </main>
 
