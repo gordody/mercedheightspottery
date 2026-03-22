@@ -4,7 +4,11 @@ export default config({
   ui: {
     brand: { name: 'Merced Heights Pottery' },
   },
-  storage: { kind: 'local' },
+  storage: {
+    kind: 'github',
+    repo: 'gordody/mercedheightspottery',
+    branchPrefix: 'new-pieces/'
+  },
 
   collections: {
     pieces: collection({
