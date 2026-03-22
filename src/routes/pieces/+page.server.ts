@@ -1,6 +1,6 @@
 import { createGitHubReader } from '@keystatic/core/reader/github';
 import keystaticConfig from '../../../keystatic.config';
-import { isSnipcartEnabled } from '../../lib/server/feature-flags';
+import { isSnipcartEnabled } from '$lib/server/feature-flags';
 
 export async function load() {
   const reader = createGitHubReader(keystaticConfig, {
