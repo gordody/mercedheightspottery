@@ -1,6 +1,8 @@
 node_modules
 build
 .DS_Store
+.svelte-kit
+dist
 
 # ============================================================================
 # Created by https://gitignores.com/
