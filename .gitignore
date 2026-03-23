@@ -145,7 +145,7 @@ bower_components/
 cover/
 jspm_packages/
 lib-cov/
-lib/
+/lib/
 my-app*
 out/
 pids/
