@@ -3,7 +3,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && node scripts/postbuild-vercel.mjs",
 		"preview": "vite preview",
 		"clean": "rm -rf .svelte-kit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
