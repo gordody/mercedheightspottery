@@ -37,10 +37,9 @@ export default config({
         available: fields.checkbox({ label: 'Available for purchase', defaultValue: true }),
         featured: fields.checkbox({ label: 'Feature on homepage', defaultValue: false }),
         images: fields.array(
-          fields.image({ label: 'Image', directory: 'static/images', publicPath: '/images/' }),
+          fields.image({ label: 'Image', directory: 'static/images/{title}', publicPath: '/images/{title}/' }),
           { label: 'Images', 
             itemLabel: (props) => {
-              console.log("images=", props);
               return 'Image';
           }
          }
