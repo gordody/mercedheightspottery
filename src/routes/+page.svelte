@@ -1,10 +1,3 @@
-<script lang="ts">
-const target = import.meta.env.VITE_DEPLOY_TARGET; // 'vercel' | undefined
-const deploy_environment = import.meta.env.VITE_DEPLOY_ENVIRONMENT; // 'production' | 'preview' | 'development'
-
-console.log("Env: ", "target=", target, "environment=", deploy_environment);
-</script>
-
 <svelte:head>
   <title>Merced Heights Pottery</title>
 </svelte:head>
@@ -15,9 +8,9 @@ console.log("Env: ", "target=", target, "environment=", deploy_environment);
     <p>Handcrafted ceramic pieces</p>
 
     <img src="images/hero.jpg" alt="Merced Heights Pottery" height="400" />
-    
-    <br>
-      <a href="/pieces" class="cta-button">View Pieces</a>
+
+    <br />
+    <a href="/pieces" class="cta-button">View Pieces</a>
   </section>
 </main>
 
