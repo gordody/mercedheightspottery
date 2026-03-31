@@ -2,6 +2,7 @@
   import { dev } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { onMount } from 'svelte';
+	import Footer from '../lib/components/Footer.svelte';
 
 	const SNIPCART_VERSION = '3.3.3';
 	const SNIPCART_CDN_BASE = `https://cdn.snipcart.com/themes/v${SNIPCART_VERSION}/default`;
@@ -51,4 +52,21 @@
 	}
 </script>
 
-<slot />
+<div class="layout-shell">
+	<div class="layout-content">
+		<slot />
+	</div>
+	<Footer />
+</div>
+
+<style>
+	.layout-shell {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.layout-content {
+		flex: 1;
+	}
+</style>
