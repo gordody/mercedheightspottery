@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    flex: 1;
     background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
   }
 
